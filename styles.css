@@ -1,0 +1,129 @@
+
+* {
+    box-sizing: border-box; /*Se restablecen estilos del navegador*/
+  }
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+/*
+Los bordes se pueden usar para agrupar y priorizar contenido.
+
+El buen uso del espacio en blanco puede enfocar los elementos importantes de su página y ayudar a guiar la vista de su usuario a través de su texto.
+
+*/
+
+.label {
+    border: 2px solid black; /*Borde negro separador*/
+    width: 270px; /*Tamaño del borde*/
+    margin: 20px auto; /*Centrado*/
+    padding: 0 7px;
+}
+
+/*Recuerde que el uso de h1, h2 y etiquetas similares determinan la estructura semántica de su HTML. Sin embargo, puede ajustar el CSS de estos elementos para controlar el flujo visual y la jerarquía.
+
+Cree una regla h1 y establezca la propiedad font-weight en 800. Esto hará que su texto h1 sea más audaz.*/
+
+header h1 {
+    /*font-weight: 800; Le da un negrito más alto al h1*/
+    text-align: center; /*Centra la fuente*/
+     margin: -4px 0; /*Mueve hacía arriba el h1*/
+}
+
+p {
+    margin: 0; /*Elimina todos los márgenes de p*/
+    display: flex;
+    justify-content: space-between; /*COn ayuda del span del html divide la fuente */
+}
+
+/*
+Las líneas pueden ayudar a separar y agrupar contenido importante, especialmente cuando el espacio es limitado.
+
+Cree un elemento div debajo de su elemento h1 y asígnele un atributo class establecido en divider.
+*/
+
+.divider {
+    border-bottom: 1px solid #888989; /*crea línea divisoria entre el h1 y los elementos p*/
+    margin: 2px 0;
+    letter-spacing: 0.15px; /*Ajusta el espacio entre cada carácter de texto en un elemento*/
+}
+
+/*Esta clase se asignará simultaneamente a elementos que requieran negrita*/
+.bold {
+    font-weight: 800;
+}
+
+.large {
+    height: 10px; /*Esto hará que el div se vea como una línea gruesa*/
+}
+
+.medium {
+    height: 5px;
+}
+
+.large, 
+.medium {
+    background-color: black;
+    border: 0;
+}
+
+/*La unidad rem significa root em, y es relativa al tamaño de fuente del elemento html.*/
+
+/*calcularía aproximadamente 13.6px (recuerde que configuró su html para tener un font-size de 16px*/
+.small-text {
+    font-size: 0.85rem;
+}
+
+.calories-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.calories-info h2 {
+    margin: 0;
+}
+
+.left-container p {
+    margin: -5px -2px;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.calories-info span {
+    margin: -7px -2px;
+    font-size: 2.4em;
+    font-weight: 700;
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+.indent {
+    margin-left: 1em;
+}
+
+.double-indent {
+    margin-left: 2em;
+}
+
+/*El pseudo-selector :not se puede utilizar para seleccionar todos los elementos que no coincidan con la regla CSS dada.*/
+.daily-value p:not(.no-divider) {
+    border-bottom: 1px solid #888989;
+}
+/*Lo anterior selecciona todos los elementos p sin una clase de no-divider*/
+
+.note {
+    padding: 0 8px;
+    margin: 5px 0;
+    font-size: 0.6rem;
+    text-indent: -8px;
+}
+
+
